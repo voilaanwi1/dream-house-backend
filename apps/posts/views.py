@@ -1,9 +1,6 @@
-from django.shortcuts import render
 from rest_framework import generics
 from .serializers import PostSerializer
 from .models import Post
-
-# Create your views here.
 
 class PostList(generics.ListAPIView):
     queryset = Post.objects.order_by('-created_at').all()

@@ -1,7 +1,8 @@
 from .models import Home
 from rest_framework import serializers
 
-class HomeSerializers(serializers.ModelSerializer):
+class HomeSerializer(serializers.ModelSerializer):
+
     class Meta:
-        model= Home
-        field = "__all__"
+        model = Home
+        fields = '__all__'

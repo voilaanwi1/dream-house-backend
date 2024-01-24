@@ -1,33 +1,25 @@
 from django.db import models
 from apps.users.models import User
 
-
-# Create your models here.
-
 class SellRequest(models.Model):
     class Meta(object):
-        db_table='sellrequest'
-    user=models.ForeignKey(
-        User,on_delete=models.CASCADE
-    )
-    address=models.CharField(
-        'Address', blank=False, null=False, max_length=100, db_index=True, default='address'
+        db_table = 'sellrequest'
 
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE
     )
-    sqft=models.CharField(
-        'SQFT', blank=False, null= False, max_length=60, db_index=True, default='sqft'
+    address = models.CharField(
+        'Address', blank=False, null=False, db_index=True, max_length=100, default='Address'
     )
-    age_building=models.IntegerField(
-        'age of building', blank=False, null=False, db_index=True
+    sqft = models.CharField(
+        'SQFT', blank=False, null=False, max_length=50, db_index=True, default='SQFT'
     )
-    created_at=models.DateTimeField(
-        'created date time', blank=True, auto_now_add=True
+    age_building = models.IntegerField(
+        'Age of Building', blank=False, null=False, db_index=True 
     )
-    updated_at=models.DateTimeField(
-        'updated date time', blank=True, auto_now=True
+    created_at = models.DateTimeField(
+        'Created Datetime', blank=True, auto_now_add=True
     )
-
-
-
-
-
+    updated_at = models.DateTimeField(
+        'Updated Datetime', blank=True, auto_now=True
+    )
