@@ -1,7 +1,6 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
 
-# Create your models here.
 
 class Post(models.Model):
     class Meta(object):
@@ -22,4 +21,3 @@ class Post(models.Model):
     updated_at = models.DateTimeField(
         'Updated Datetime', blank=True, auto_now=True
     )
-

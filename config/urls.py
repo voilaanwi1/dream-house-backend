@@ -1,8 +1,7 @@
-"""
-URL configuration for config project.
+"""backend URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.0/topics/http/urls/
+    https://docs.djangoproject.com/en/3.2/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -20,9 +19,11 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('posts/', include('apps.posts.urls')),
-    path('favorites/', include('apps.favorites.urls')),
-    path('home/', include('apps.home.urls')),
-    path('sellrequests/', include('apps.sellrequests.urls')),
+    path('house/', include('apps.home.urls')),
     path('tags/', include('apps.tags.urls')),
     path('users/', include('apps.users.urls')),
+    path('sellrequest/', include('apps.sellrequests.urls')),
+    path('favourites/', include('apps.favourites.urls')),
+
+
 ]
