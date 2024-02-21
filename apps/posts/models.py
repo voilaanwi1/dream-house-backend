@@ -18,6 +18,8 @@ class Post(models.Model):
     created_at = models.DateTimeField(
         'Created Datetime', blank=True, auto_now_add=True
     )
+    
     updated_at = models.DateTimeField(
         'Updated Datetime', blank=True, auto_now=True
     )
+
