@@ -106,11 +106,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 # Local Database
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
-    'default': dj_database_url.parse('postgres://dreamhouse_postgresql_db_user:Vmcz6xOVC30nuzxoHFY3kWkgoSA9w7N6@dpg-cn27m12cn0vc738u05o0-a.oregon-postgres.render.com/dreamhouse_postgresql_db')
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+    
 }
 
 # Heroku PostgreSQL Database
